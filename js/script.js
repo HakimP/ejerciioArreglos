@@ -38,53 +38,65 @@ function buscarContenido (palabra, cadenaCarac) {
     return n;
 }
 
+var coco = false;
+var contador = 1;
+
 function respondePregunta() {
 	var numero = prompt("Pregunta Algo", "");
-
 
 	for(var i = 0 ; i <= arraySaludos.length-1; i++) {
 		if(buscarContenido(arraySaludos[i], numero.toLowerCase() ) != -1) {
 			console.log("Hola!!!");
 			banderaHola = true;
+			contador = 0;
 		}
 	}
+	if(!coco && banderaHola && contador > 0) {
+		console.log("no mames");
+	}
 
-	// if(banderaHola) {
-		for(var i = 0 ; i <= arraySentimientos.length-1; i++) {
-			if(buscarContenido(arraySentimientos[i][0], numero.toLowerCase()) != -1 && banderaHola) {
-				// console.log("si existe el Sent");
-				switch(arraySentimientos[i][0]) {
-				    case "contento":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "triste":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "enamorado":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "odio":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "intenso":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "soledad":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    case "angustia":
-				        console.log(respuestasSentimientos(i));
-				        break;
-				    default:
-				        console.log("Pregunta random");
-				        break; 
-				}
-			} else if (!banderaHola){
-				 console.log("Pregunta otra vez por que no existes");
+	for(var i = 0 ; i <= arraySentimientos.length-1; i++) {
+		coco = false;
+		if(buscarContenido(arraySentimientos[i][0], numero.toLowerCase()) != -1) {
+			// console.log("si existe el Sent");
+			contador +=1;
+			switch(arraySentimientos[i][0]) {
+			    case "contento":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "triste":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "enamorado":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "odio":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "intenso":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "soledad":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    case "angustia":
+			        console.log(respuestasSentimientos(i));
+			        coco = true;
+			        break;
+			    default:
+			        respondePregunta();
+			        break; 
 			}
-		}
-	// }
-	respondePregunta();
+			
+		}	
+
+	}
 }
 
 function respuestasSentimientos(sentimi) {
