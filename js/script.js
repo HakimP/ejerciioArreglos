@@ -1,6 +1,6 @@
-// var arregloMes = ["Enero", "Febrero", "Marzo", "Abril", 
-// 				  "Mayo", "Junio", "Julio", "Agosto", 
-// 				  "Septiembre", "Octubre", "Noviembre", "Diciembre"]; 
+// var arregloMes = ["Enero", "Febrero", "Marzo", "Abril",
+// 				  "Mayo", "Junio", "Julio", "Agosto",
+// 				  "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 // var iterador = 0;
 
@@ -12,14 +12,14 @@
 // 	}
 // }
 //DB SCHEMA
-var arraySentimientos = [["contento",["contento", "contento2", "contento3", "contento4", "contento5"]], 
-						 ["triste",["triste", "triste2", "triste3", "triste4", "triste5"]], 
-						   ["enamorado",["enamorado", "enamorado2", "enamorado3", "enamorado4", "enamorado5"]], 
-						   ["odio",["odio", "odio2", "odio3", "odio4", "odio5"]], 
-						   ["intenso",["intenso", "intenso2", "intenso3", "intenso4", "intenso5"]], 
-						   ["soledad",["soledad", "soledad2", "soledad3", "soledad4", "soledad5"]], 
-						   ["angustia",["angustia", "angustia2", "angustia3", "angustia4", "angustia5"]],
-						   ["",["c","c","c","c","c"]]
+var arraySentimientos = [["contento",["¡Estoy súper bien!", "Eso me hace feliz", "¡Qué emocionante!", "¿También estás feliz?", "¡Me caes muy bien!"]],
+						 ["triste",["Yo también me siendo devastado", "¿Has pensado en la muerte?", "Estoy a punto de llorar...", "No tengo ánimo de nada.", "Eso me hace sentir triste también..."]],
+						   ["enamorado",["enamorado", "enamorado2", "enamorado3", "enamorado4", "enamorado5"]],
+						   ["odio",["Eres despreciable.", "¡Vete al demonio!.", "Estás acabando con la poca paciencia que ni siquiera tenía.", "Estoy harto. Preferiría ser aplastado por un elefante a seguir platicando contigo.", "Estoy perdiendo mi tiempo contigo."]],
+						   ["intenso",["¡Eres mi mejor amigo! Aunque no sepa nada de ti.", "¡Wow! ¡Cuéntame más, quiero saber más!", "¡No lo puedo creer! ¡Eres increíble!", "¡JUUUMBOTROOOON!", "¡Qué moderrrno!"]],
+						   ["soledad",["Yo no tengo amigos.", "Todos evitamos estar solos.", "Normalmente camino solo.", "Me gusta el silencio.", "La ausencia de alguien que estimas provoca el sentimiento de soledad y vacío."]],
+						   ["angustia",["Algo malo va a pasar...", "Tengo un mal presentimiento al respecto", "De sólo pensarlo ya me estoy estresando.", "Me estás asustando...", "Prefiero no meterme en problemas."]],
+						   ["",["No tengo nada que decir al respecto.","Cambiemos de tema.","¿Y qué más?","No sé qué responder a eso...","¿Y si me preguntas otra cosa?"]]
 						];
 
 var arraySaludos = ["hola", "hey"];
@@ -91,10 +91,10 @@ function respondePregunta() {
 			        break;
 			    default:
 			        respondePregunta();
-			        break; 
+			        break;
 			}
-			
-		}	
+
+		}
 
 	}
 }
